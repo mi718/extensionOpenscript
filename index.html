@@ -1,0 +1,52 @@
+<html>
+
+<head>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <header>
+  <img src="openscriptIcon.png"  alt="openscriptLogo">
+  <h1>Time manager</h1>
+ </header>
+ <main>
+
+  <div id="title">
+   <h2>-- present members --</h2> 
+  </div>
+
+   <div class="users">
+   <div>
+    <button id="robin-btn">Robin</button>
+    <button id="diego-btn">Diego</button>
+   </div>
+   <div>
+    <button id="aaron-btn">Aaron</button>
+    <button id="micael-btn">Micael</button>
+   </div>
+   <div>
+  <button id="next-btn"><img src="arrowOpenscript.png" alt="arrow" id="arrow"></button>
+
+
+  <!-- section timer -->
+  <section id="timerZone" style="display: none;">
+    <h2 id="workedTime">Worked time:</h2>
+    <div class="watch">
+      <div class="time">
+       00:00:00
+      </div>
+      <div class="controls">
+      <button id="stop" class="control_btn">Stop</button>
+      <button id="start" class="control_btn">Start</button>
+      <button id="save" class="control_btn">Save</button>
+     </div>
+    </div>
+  </section>
+
+ </main>
+ <script src="script.js"></script>
+</body>
+<footer>
+  <p></p>
+</footer>
+</html>
