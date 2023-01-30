@@ -4,7 +4,6 @@
  "name": "Time tracker",
  "action": {
   "default_popup": "index.html",
-  "default_icon": "openscriptIcon.png"
+  "default_icon": "images/openscriptIcon.png"
  }
-
 }
