@@ -13,7 +13,7 @@ robinBtn.addEventListener('click', function(){
  startBtn.style.display = "block"
  startBtn.style.backgroundColor = "rgba(92, 164, 89, 255)"
 	present.push(" Robin")
-	console.log(present)
+	robinBtn.disabled = true; 
 })
 
 diegoBtn.addEventListener('click', function(){
@@ -21,7 +21,8 @@ diegoBtn.addEventListener('click', function(){
  startBtn.style.display = "block"
  startBtn.style.backgroundColor = "rgba(92, 164, 89, 255) "
 	present.push(" Diego")
-	console.log(present)
+	disabled = true; 
+	diegoBtn.disabled = true; 
 })
 
 aaronBtn.addEventListener('click', function(){
@@ -29,7 +30,8 @@ aaronBtn.addEventListener('click', function(){
  startBtn.style.display = "block"
  startBtn.style.backgroundColor = "rgba(92, 164, 89, 255) "
 	present.push(" Aaron")
-	console.log(present)
+	disabled = true; 
+	aaronBtn.disabled = true; 
 })
 
 micaelBtn.addEventListener('click', function(){
@@ -38,6 +40,8 @@ micaelBtn.addEventListener('click', function(){
  startBtn.style.backgroundColor = "rgba(92, 164, 89, 255) "
 	present.push(" Micael")
 	console.log(present)
+	disabled = true; 
+	micaelBtn.disabled = true; 
 })
 
 startBtn.addEventListener("click", function(){
@@ -98,4 +102,10 @@ function reset () {
 	stop();
 	seconds = 0;
 	time_el.innerText = '00:00:00';
+	timerZone.style.display = 'none'
+	document.getElementsByTagName("footer")[0].innerHTML = ''
+	document.getElementById("checkmark").style.display = 'block'
+	setInterval(() => {
+		window.location.reload();
+	}, 2000);
 }
