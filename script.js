@@ -4,29 +4,40 @@ const aaronBtn = document.getElementById("aaron-btn")
 const micaelBtn = document.getElementById("micael-btn")
 const startBtn = document.getElementById("next-btn")
 const timerZone = document.getElementById("timerZone")
+let present_members = document.getElementById("present-members")
+ 
+let present = []
 
 robinBtn.addEventListener('click', function(){
  robinBtn.style. backgroundColor = "rgb(144, 196, 136)";
  startBtn.style.display = "block"
- startBtn.style.backgroundColor = "rgba(92, 164, 89, 255) "
+ startBtn.style.backgroundColor = "rgba(92, 164, 89, 255)"
+	present.push(" Robin")
+	console.log(present)
 })
 
 diegoBtn.addEventListener('click', function(){
  diegoBtn.style. backgroundColor = "rgb(144, 196, 136)";
  startBtn.style.display = "block"
  startBtn.style.backgroundColor = "rgba(92, 164, 89, 255) "
+	present.push(" Diego")
+	console.log(present)
 })
 
 aaronBtn.addEventListener('click', function(){
  aaronBtn.style. backgroundColor = "rgb(144, 196, 136)";
  startBtn.style.display = "block"
  startBtn.style.backgroundColor = "rgba(92, 164, 89, 255) "
+	present.push(" Aaron")
+	console.log(present)
 })
 
 micaelBtn.addEventListener('click', function(){
  micaelBtn.style. backgroundColor = "rgb(144, 196, 136)";
  startBtn.style.display = "block"
  startBtn.style.backgroundColor = "rgba(92, 164, 89, 255) "
+	present.push(" Micael")
+	console.log(present)
 })
 
 startBtn.addEventListener("click", function(){
@@ -36,6 +47,7 @@ startBtn.addEventListener("click", function(){
   micaelBtn.style.display = 'none'
   startBtn.style.display = 'none'
   timerZone.style.display = 'block'
+		document.getElementsByTagName("footer")[0].innerHTML = present
 })
 
 //timer section
