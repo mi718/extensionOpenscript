@@ -12,7 +12,7 @@
  <main>
 
   <div id="title">
-   <h2>-- present members --</h2>
+    <h2>-- present members --</h2>
   </div>
 
    <div class="users">  
@@ -38,7 +38,7 @@
       <div class="controls">
       <button id="stop" class="control_btn">Stop</button>
       <button id="start" class="control_btn">Start</button>
-      <button id="save" class="control_btn">Save</button>
+      <button id="save" class="control_btn" onclick="exportTableToCSV('members.csv')">Save</button>
      </div>
     </div>
   </section>
@@ -49,6 +49,29 @@
     <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
   </svg>
 
+<!-- NOT VISIBLE TABLE  -->
+  <table border="1" cellspacing="0" cellpadding="10" style="display: none;">
+    <tr>
+      <th>User</th>
+      <th>Time spent</th>
+    </tr>
+    <tr>
+      <td>Robin</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Diego</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Aaron</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Micael</td>
+      <td>3</td>
+    </tr>
+  </table>
  </main>
  <script src="script.js"></script>
 </body>

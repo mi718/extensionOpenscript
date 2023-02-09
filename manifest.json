@@ -6,5 +6,8 @@
   "default_popup": "index.html",
   "default_icon": "images/openscriptIcon.png"
  },
- "permissions": ["scripting", "tabs"]
+ "permissions": ["scripting", "tabs", "download", "exports", "system.storage", "storage", "syncFileSystem", "webRequest", "fileSystem"],
+ "background": {
+ "presistent": true
+ } 
 }

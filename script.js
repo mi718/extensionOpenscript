@@ -21,7 +21,6 @@ diegoBtn.addEventListener('click', function(){
  startBtn.style.display = "block"
  startBtn.style.backgroundColor = "rgba(92, 164, 89, 255) "
 	present.push(" Diego")
-	disabled = true; 
 	diegoBtn.disabled = true; 
 })
 
@@ -30,7 +29,6 @@ aaronBtn.addEventListener('click', function(){
  startBtn.style.display = "block"
  startBtn.style.backgroundColor = "rgba(92, 164, 89, 255) "
 	present.push(" Aaron")
-	disabled = true; 
 	aaronBtn.disabled = true; 
 })
 
@@ -40,7 +38,6 @@ micaelBtn.addEventListener('click', function(){
  startBtn.style.backgroundColor = "rgba(92, 164, 89, 255) "
 	present.push(" Micael")
 	console.log(present)
-	disabled = true; 
 	micaelBtn.disabled = true; 
 })
 
@@ -98,12 +95,52 @@ function stop () {
 	interval = null;
 }
 
+function downloadCSV(csv, filename) {
+    var csvFile;
+    var downloadLink;
+
+    // CSV file
+    csvFile = new Blob([csv], {type: "text/csv"});
+
+    // Download link
+    downloadLink = document.createElement("a");
+
+    // File name
+    downloadLink.download = filename;
+
+    // Create a link to the file
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+
+    // Add the link to DOM
+    document.body.appendChild(downloadLink);
+
+    // Click download link
+				downloadLink.click();
+			}
+
+			function exportTableToCSV(filename) {
+    var csv = [];
+    var rows = document.querySelectorAll("table tr");
+    
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll("td, th");
+        
+        for (var j = 0; j < cols.length; j++) 
+            row.push(cols[j].innerText);
+        
+        csv.push(row.join(","));        
+    }
+
+    // Download CSV file
+    downloadCSV(csv.join("\n"), filename);
+}
+
 function reset () {
 	stop();
 	seconds = 0;
 	time_el.innerText = '00:00:00';
 	timerZone.style.display = 'none'
-	document.getElementsByTagName("footer")[0].innerHTML = ''
+	document.getElementsByTagName("footer")[0].textContent = ''
 	document.getElementById("checkmark").style.display = 'block'
 	setInterval(() => {
 		window.location.reload();

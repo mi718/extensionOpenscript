@@ -1,5 +1,6 @@
 html{
  background-color: rgb(234, 235, 219);
+ user-select: none;
 }
 
 body{
